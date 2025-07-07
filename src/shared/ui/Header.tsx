@@ -37,12 +37,18 @@ export const Header = () => {
           ) : user ? (
             <>
               <span className="text-sm">Hi, {user.email}</span>
-              <button onClick={handleSignOut} className="hover:text-gray-300">Sign Out</button>
+              <button onClick={handleSignOut} className="hover:text-gray-300">
+                Sign Out
+              </button>
             </>
           ) : (
             <>
-              <Link href="/signin" className="hover:text-gray-300">Sign In</Link>
-              <Link href="/signup" className="hover:text-gray-300">Sign Up</Link>
+              <Link href="/signin" className="hover:text-gray-300">
+                Sign In
+              </Link>
+              <Link href="/signup" className="hover:text-gray-300">
+                Sign Up
+              </Link>
             </>
           )}
         </div>

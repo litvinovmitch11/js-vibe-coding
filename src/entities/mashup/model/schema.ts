@@ -8,7 +8,7 @@ export const mashupSchema = z.object({
     .string()
     .max(500, 'Description cannot exceed 500 characters')
     .optional(),
-  isExplicit: z.boolean()
+  isExplicit: z.boolean(),
 });
 
 export type MashupFormValues = z.infer<typeof mashupSchema>;

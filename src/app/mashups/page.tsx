@@ -12,7 +12,10 @@ export default async function MashupsPage() {
     <div className="container mx-auto p-4">
       <div className="flex justify-between items-center mb-8">
         <h1 className="text-4xl font-bold">All Mashups</h1>
-        <Link href="/mashups/create" className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+        <Link
+          href="/mashups/create"
+          className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+        >
           Create Mashup
         </Link>
       </div>
