@@ -11,7 +11,8 @@ interface PageProps {
 export async function generateMetadata({
   params,
 }: PageProps): Promise<Metadata> {
-  const mashup = await getMashupById(params.id);
+  const { id } = await params;
+  const mashup = await getMashupById(id);
   if (!mashup) {
     return {
       title: 'Mashup Not Found',
@@ -25,7 +26,8 @@ export async function generateMetadata({
 }
 
 export default async function SingleMashupPage({ params }: PageProps) {
-  const mashup = await getMashupById(params.id);
+  const { id } = await params;
+  const mashup = await getMashupById(id);
 
   if (!mashup) {
     notFound(); // Показывает страницу 404, если мэшап не найден
